@@ -12,7 +12,6 @@ developers:
     - middle8media
 
   channel:
-    "#developers"
 
   exclude_titles:
     - "[DO NOT MERGE]"
