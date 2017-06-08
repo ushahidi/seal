@@ -1,0 +1,39 @@
+# Please insert new items alphabetically.
+
+developers:
+  members:
+    - rjmackay
+    - willdoran
+    - jasonmule
+    - kamaulynder
+    - mackers
+    - tuxpipier
+    - angamanga
+    - middle8media
+
+  channel:
+    "#developers"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - "[WIP]"
+    - WIP
+
+  use_labels: true
+
+  exclude_labels:
+    - "Stage: In Development"
+    - "WIP"
+    - "Icebox"
+
+  quotes:
+    - Try to pair when possible
+    - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
+    - Never be afraid to suggest better ways of working.
+    - Be nice and respect each other. Support each other.
+    - Ask if anyone needs support before picking up new work
+    - Stories should start with a user need
+    - Waffle should reflect what everyone’s working on - if it's going to take longer than 30 minutes or it's going to need to be deployed - write an issue.
+    - Before starting new work, see if others can be helped with their existing work.
+
