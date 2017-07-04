@@ -11,7 +11,7 @@ developers:
     - angamanga
     - middle8media
 
-  channel:
+  channel: "#developers"
 
   exclude_titles:
     - "[DO NOT MERGE]"
