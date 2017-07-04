@@ -2,6 +2,8 @@ class MessageBuilder
 
   attr_accessor :pull_requests, :report, :mood, :poster_mood
 
+  ANGER_THRESHOLD = 5
+
   def initialize(content, mode=nil)
     @content = content
     @mode = mode
@@ -38,7 +40,7 @@ class MessageBuilder
     else
       weekdays_age = actual_age
     end
-    weekdays_age > 2
+    weekdays_age > ANGER_THRESHOLD
   end
 
   private
@@ -52,7 +54,7 @@ class MessageBuilder
     recent_pull_requests = @content.reject { |_title, pr| rotten?(pr) }
     list_recent_pull_requests = recent_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
     informative_bark = "There are also these pull requests that need to be reviewed today:\n\n#{list_recent_pull_requests.join} " if !recent_pull_requests.empty?
-    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{angry_bark.join}\nRemember each time you forget to review your pull requests, a baby seal dies.
+    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over #{ANGER_THRESHOLD} days.\n\n#{angry_bark.join}\n
     \n\n#{informative_bark}"
   end
 
