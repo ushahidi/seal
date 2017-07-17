@@ -23,6 +23,7 @@ developers:
 
   exclude_labels:
     - "Stage: In Development"
+    - "Stage: Dev Backlog"
     - "WIP"
     - "Icebox"
 
